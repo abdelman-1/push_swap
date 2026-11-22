@@ -1,1 +1,1 @@
-NAME= test
+NAME= testc
