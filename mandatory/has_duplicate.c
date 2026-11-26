@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   has_duplicate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lilyass <lilyass@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/24 12:20:19 by lilyass           #+#    #+#             */
-/*   Updated: 2026/11/24 12:31:33 by lilyass          ###   ########.fr       */
+/*   Created: 2026/11/23 23:54:09 by lilyass           #+#    #+#             */
+/*   Updated: 2026/11/26 12:58:04 by lilyass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
-void	free_stack(t_stack *stack)
+int	has_duplicate(t_stack *a, int val)
 {
 	t_node	*node;
-	t_node	*next;
 
-	if (!stack)
-		return ;
-	node = stack->top;
+	node = a->top;
 	while (node)
 	{
-		next = node->next;
-		free(node);
-		node = next;
+		if (node->value == val)
+			return (1);
+		node = node->next;
 	}
-	stack->top = NULL;
-	stack->bottom = NULL;
-	stack->size = 0;
+	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: lilyass <lilyass@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 12:54:30 by lilyass           #+#    #+#             */
-/*   Updated: 2026/11/24 18:28:23 by lilyass          ###   ########.fr       */
+/*   Updated: 2026/11/26 12:58:25 by lilyass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 int	parse_flag(const char *arg, t_config *cfg)
 {

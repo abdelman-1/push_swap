@@ -6,11 +6,11 @@
 /*   By: lilyass <lilyass@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 16:06:26 by lilyass           #+#    #+#             */
-/*   Updated: 2026/11/24 18:29:19 by lilyass          ###   ########.fr       */
+/*   Updated: 2026/11/26 12:58:22 by lilyass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 static void	free_tokens(char **tokens)
 {

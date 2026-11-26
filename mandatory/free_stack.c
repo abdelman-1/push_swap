@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_reverse_rotate.c                                :+:      :+:    :+:   */
+/*   free_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lilyass <lilyass@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/22 22:50:25 by lilyass           #+#    #+#             */
-/*   Updated: 2026/11/22 23:40:53 by lilyass          ###   ########.fr       */
+/*   Created: 2026/11/24 12:20:19 by lilyass           #+#    #+#             */
+/*   Updated: 2026/11/26 12:58:00 by lilyass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "push_swap.h"
 
-void	do_reverse_rotate(t_stack *stack)
+void	free_stack(t_stack *stack)
 {
-	if (stack->size < 2)
+	t_node	*node;
+	t_node	*next;
+
+	if (!stack)
 		return ;
-	stack->top->prev = stack->bottom;
-	stack->bottom->prev->next = NULL;
-	stack->bottom = stack->bottom->prev;
-	stack->top->prev->next = stack->top;
-	stack->top = stack->top->prev;
-	stack->top->prev = NULL;
+	node = stack->top;
+	while (node)
+	{
+		next = node->next;
+		free(node);
+		node = next;
+	}
+	stack->top = NULL;
+	stack->bottom = NULL;
+	stack->size = 0;
 }
