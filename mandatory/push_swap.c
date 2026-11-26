@@ -6,11 +6,11 @@
 /*   By: lilyass <lilyass@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 22:09:13 by lilyass           #+#    #+#             */
-/*   Updated: 2026/11/22 15:54:40 by lilyass          ###   ########.fr       */
+/*   Updated: 2026/11/26 13:02:58 by lilyass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "push_swap.h"
 
 int	main(int argc, char ** argv){
 	int i;
